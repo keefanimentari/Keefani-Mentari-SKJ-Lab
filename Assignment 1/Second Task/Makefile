@@ -1,15 +1,15 @@
-all: multiplication
+all: multiply
 
-multiplication : multiplication.cpp
-	g++ -o multiplication multiplication.cpp
+multiply : multiply.cpp
+        g++ -o multiply multiply.cpp
 
-dump: multiplication
-	objdump -d multiplication > multiplication.asm
+dump: multiply
+        objdump -d multiply > multiply.asm
 
 # Clean target
 clean:
-	rm -f multiplication multiplication.asm
+        rm -f multiply multiply.asm
 
 # Run target
-run: multiplication
-	./multiplication
+run: multiply
+        ./multiply
